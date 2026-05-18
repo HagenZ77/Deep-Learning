@@ -52,7 +52,7 @@
         ]
     },
     "phase": "DropoutValue",
-    "name": "dropout_before_flatten",
+    "name": "0.3",
     "evaluation": {
         "best_epoch": 4,
         "train_loss": 0.03818959742331162,
