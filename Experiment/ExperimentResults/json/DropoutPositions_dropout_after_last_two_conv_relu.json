@@ -1,0 +1,67 @@
+{
+    "created_at": "2026-05-17T12:50:53.954684",
+    "dataset": {
+        "train_count": 58612,
+        "test_count": 11002,
+        "image_size": [
+            128,
+            128,
+            3
+        ],
+        "classes": 62
+    },
+    "training": {
+        "epochs": 40,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "learning_rate": 0.0003,
+        "loss": "nll_loss_with_log_softmax_output",
+        "metrics": [
+            "accuracy"
+        ]
+    },
+    "model_architecture": "Sequential(\n  (0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (1): ReLU()\n  (2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (3): ReLU()\n  (4): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (5): Conv2d(64, 128, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (6): ReLU()\n  (7): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (8): Conv2d(128, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (9): ReLU()\n  (10): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (11): Conv2d(256, 512, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (12): ReLU()\n  (13): Dropout2d(p=0.3, inplace=False)\n  (14): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (15): Conv2d(512, 1024, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (16): ReLU()\n  (17): Dropout2d(p=0.3, inplace=False)\n  (18): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (19): Flatten(start_dim=1, end_dim=-1)\n  (20): Linear(in_features=9216, out_features=512, bias=True)\n  (21): ReLU()\n  (22): Linear(in_features=512, out_features=128, bias=True)\n  (23): ReLU()\n  (24): Linear(in_features=128, out_features=62, bias=True)\n  (25): Softmax(dim=1)\n)",
+    "history": {
+        "loss": [
+            1.8559562526005149,
+            0.11469676455422206,
+            0.05718177082353547,
+            0.04263284693015008,
+            0.035936081673234525
+        ],
+        "accuracy": [
+            0.48280215655497166,
+            0.9674298778407152,
+            0.9835699174230533,
+            0.9883470961577834,
+            0.990087354125435
+        ],
+        "val_loss": [
+            0.429302160202139,
+            0.18140572878045397,
+            0.13035607439206914,
+            0.14571338075983262,
+            0.14007519925626716
+        ],
+        "val_accuracy": [
+            0.8832939465551718,
+            0.9540992546809671,
+            0.9670968914742774,
+            0.9602799491001636,
+            0.9641883293946555
+        ]
+    },
+    "phase": "DropoutPositions",
+    "name": "dropout_after_last_two_conv_relu",
+    "evaluation": {
+        "best_epoch": 3,
+        "train_loss": 0.05718177082353547,
+        "train_accuracy": 0.9835699174230533,
+        "val_loss": 0.13035607439206914,
+        "val_accuracy": 0.9670968914742774,
+        "accuracy_gap": 0.016473025948775977,
+        "loss_gap": 0.07317430356853367,
+        "overfitting_penalty": 0.0,
+        "score": 0.9670968914742774
+    }
+}

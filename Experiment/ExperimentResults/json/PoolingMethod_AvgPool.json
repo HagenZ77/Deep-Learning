@@ -1,0 +1,75 @@
+{
+    "created_at": "2026-05-17T11:18:20.375648",
+    "dataset": {
+        "train_count": 58612,
+        "test_count": 11002,
+        "image_size": [
+            128,
+            128,
+            3
+        ],
+        "classes": 62
+    },
+    "training": {
+        "epochs": 40,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "learning_rate": 0.0003,
+        "loss": "nll_loss_with_log_softmax_output",
+        "metrics": [
+            "accuracy"
+        ]
+    },
+    "model_architecture": "Sequential(\n  (0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (1): ReLU()\n  (2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (3): ReLU()\n  (4): AvgPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0)\n  (5): Conv2d(64, 128, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (6): ReLU()\n  (7): AvgPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0)\n  (8): Conv2d(128, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (9): ReLU()\n  (10): AvgPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0)\n  (11): Conv2d(256, 512, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (12): ReLU()\n  (13): AvgPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0)\n  (14): Conv2d(512, 1024, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))\n  (15): ReLU()\n  (16): AvgPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0)\n  (17): Flatten(start_dim=1, end_dim=-1)\n  (18): Linear(in_features=9216, out_features=64, bias=True)\n  (19): ReLU()\n  (20): Linear(in_features=64, out_features=62, bias=True)\n  (21): Softmax(dim=1)\n)",
+    "history": {
+        "loss": [
+            2.2041685343366315,
+            0.27947338185286646,
+            0.08478037321198083,
+            0.05294251167366398,
+            0.04123601031160898,
+            0.0309156888228335,
+            0.024075505909431305
+        ],
+        "accuracy": [
+            0.38362451375145024,
+            0.9188562069200846,
+            0.9762847198525899,
+            0.9854125435064492,
+            0.9886542005050161,
+            0.9914181396301098,
+            0.9936872995291066
+        ],
+        "val_loss": [
+            1.0499479534282699,
+            0.5170322335746558,
+            0.3115098089921654,
+            0.28839235134258306,
+            0.18401793581989756,
+            0.2883953014942247,
+            0.20842423786692735
+        ],
+        "val_accuracy": [
+            0.6855117251408834,
+            0.8772950372659516,
+            0.9168333030358117,
+            0.9422832212325032,
+            0.9566442465006363,
+            0.9461916015269951,
+            0.9558262134157426
+        ]
+    },
+    "phase": "PoolingMethod",
+    "name": "AvgPool",
+    "evaluation": {
+        "best_epoch": 5,
+        "train_loss": 0.04123601031160898,
+        "train_accuracy": 0.9886542005050161,
+        "val_loss": 0.18401793581989756,
+        "val_accuracy": 0.9566442465006363,
+        "accuracy_gap": 0.03200995400437978,
+        "loss_gap": 0.14278192550828858,
+        "overfitting_penalty": 0.0,
+        "score": 0.9566442465006363
+    }
+}

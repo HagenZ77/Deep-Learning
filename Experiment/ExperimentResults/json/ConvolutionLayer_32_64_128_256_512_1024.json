@@ -1,0 +1,83 @@
+{
+    "created_at": "2026-05-17T04:03:48.281158",
+    "dataset": {
+        "train_count": 58612,
+        "test_count": 11002,
+        "image_size": [
+            128,
+            128,
+            3
+        ],
+        "classes": 62
+    },
+    "training": {
+        "epochs": 40,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "learning_rate": 0.0003,
+        "loss": "nll_loss_with_log_softmax_output",
+        "metrics": [
+            "accuracy"
+        ]
+    },
+    "model_architecture": "Sequential(\n  (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (1): ReLU()\n  (2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (3): ReLU()\n  (4): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (6): ReLU()\n  (7): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (8): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (9): ReLU()\n  (10): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (11): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (12): ReLU()\n  (13): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (14): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n  (15): ReLU()\n  (16): MaxPool2d(kernel_size=(3, 3), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)\n  (17): Flatten(start_dim=1, end_dim=-1)\n  (18): Linear(in_features=9216, out_features=64, bias=True)\n  (19): ReLU()\n  (20): Linear(in_features=64, out_features=62, bias=True)\n  (21): Softmax(dim=1)\n)",
+    "history": {
+        "loss": [
+            2.119839328653957,
+            0.13465724445619887,
+            0.06738946110823402,
+            0.051311626730308514,
+            0.04374312909621628,
+            0.025611149222289714,
+            0.01949003615087933,
+            0.018853320256761508,
+            0.01814207959074412
+        ],
+        "accuracy": [
+            0.4523817648263154,
+            0.9666279942673855,
+            0.9848665802224801,
+            0.989097795673241,
+            0.9911451579881253,
+            0.9934996246502422,
+            0.9942673855183239,
+            0.9947109806865488,
+            0.9947621647444209
+        ],
+        "val_loss": [
+            0.6034318717815417,
+            0.2926633818022554,
+            0.31260116780408087,
+            0.2548628486707571,
+            0.1955412429306496,
+            0.18592003493432782,
+            0.1690760971414481,
+            0.2239082649675229,
+            0.260113884871792
+        ],
+        "val_accuracy": [
+            0.858207598618433,
+            0.9358298491183421,
+            0.9337393201236139,
+            0.9451917833121251,
+            0.9565533539356481,
+            0.9590983457553172,
+            0.9664606435193601,
+            0.9561897836756953,
+            0.9557353208507544
+        ]
+    },
+    "phase": "ConvolutionLayer",
+    "name": "32/64/128/256/512/1024",
+    "evaluation": {
+        "best_epoch": 7,
+        "train_loss": 0.01949003615087933,
+        "train_accuracy": 0.9942673855183239,
+        "val_loss": 0.1690760971414481,
+        "val_accuracy": 0.9664606435193601,
+        "accuracy_gap": 0.027806741998963824,
+        "loss_gap": 0.1495860609905688,
+        "overfitting_penalty": 0.0,
+        "score": 0.9664606435193601
+    }
+}
