@@ -22,7 +22,7 @@ class VGG13FineTuningRunner(TransferLearningRunner):
         self.learningRates = [0.0001, 0.00001]
         self.unfreezeLayerCounts = [1, 2, 3, 4, 5]
 
-        self.resultRoot = "/mnt/c/Users/hagen/Desktop/DeepLearning/TransferLearningResults/vgg13"
+        self.resultRoot = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/TransferLearningResults/vgg13"
         self.jsonFolder = os.path.join(self.resultRoot, "json")
         self.modelFolder = os.path.join(self.resultRoot, "models")
         self.diagramFolder = os.path.join(self.resultRoot, "diagrams")
