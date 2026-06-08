@@ -42,6 +42,7 @@ class Plot:
         self.fig.tight_layout()
         plt.show(block=False)
 
+
     def update(self, train_loss, val_loss, train_accuracy, val_accuracy):
         # Aktuelle Epoche bestimmen
         epoch = len(self.epochs) + 1
@@ -378,7 +379,7 @@ if __name__ == "__main__":
     summaryOutputPath = "/mnt/c/Users/hagen/Desktop/DeepLearning/images/best_epoch_summary.png"
 
     p = Plot()
-    
+
     # Zusammenfassung der besten Epochen ueber alle Modelle erstellen
     p.createTrainingHistoryDiagramsForAll(resultsFolder, historyOutputFolder)
     p.createBestEpochSummaryDiagram(

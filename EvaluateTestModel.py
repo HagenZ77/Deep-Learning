@@ -80,9 +80,9 @@ def plotConfusionHeatmap(confusion, labelFile, savePath=None):
 
 def main():
     # Pfade zu Testdaten, Labeldatei und final gespeichertem Modell. Muessen angepasst werden
-    testDir = "/mnt/c/Users/hagen/Desktop/DeepLearning/CleanDataset/test"
-    labelPath = "/mnt/c/Users/hagen/Desktop/DeepLearning/CleanDataset/labels.txt"
-    modelPath = "/mnt/c/Users/hagen/Desktop/DeepLearning/finalModel.pth"
+    testDir = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/CleanDataset/test"
+    labelPath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/CleanDataset/labels.txt"
+    modelPath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/finalModel.pth"
 
     # Versuchen mit der GPU zu arbeiten sonst CPU
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

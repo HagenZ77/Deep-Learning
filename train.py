@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
 from torch.utils.data import DataLoader, Dataset
-from Experiment.ModelFactory import ModelFactory
+from experiment.ModelFactory import ModelFactory
 from tools.plot import Plot
 from tools.label import Label
 from tools.makeCleanDataset import getAllImages
@@ -106,9 +106,9 @@ class Train:
 
     # Laedt Trainings- und Validierungsbilder. Der Testdatensatz wird separat in EvaluateTestModel.py verwendet.
     def loadFiles(self):
-        trainFiles = getAllImages("/mnt/c/Users/hagen/Desktop/DeepLearning/CleanDataset/train")
-        valFiles = getAllImages("/mnt/c/Users/hagen/Desktop/DeepLearning/CleanDataset/val")
-        labelFile = Label("/mnt/c/Users/hagen/Desktop/DeepLearning/CleanDataset/labels.txt")
+        trainFiles = getAllImages("/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/CleanDataset/train")
+        valFiles = getAllImages("/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/CleanDataset/val")
+        labelFile = Label("/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/CleanDataset/labels.txt")
 
         return trainFiles, valFiles, labelFile
 
