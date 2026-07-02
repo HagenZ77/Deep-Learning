@@ -73,6 +73,13 @@ class Plot:
         plt.pause(0.001)
 
 
+    def createFolderForFile(self, filePath):
+        folder = os.path.dirname(filePath)
+
+        if folder != "":
+            os.makedirs(folder, exist_ok=True)
+
+
     def getJsonFiles(self, folderPath):
         # Alle Json-Dateien rekursiv sammeln
         jsonFiles = []
@@ -370,6 +377,35 @@ class Plot:
             outputPath = os.path.join(outputFolder, safePhaseName + ".png")
 
             self.createPhaseSummaryDiagram(phaseName, phaseEntries, outputPath)
+
+
+    def createConfusionHeatmap(self, confusion, labelFile, savePath=None):
+        matplotlib.use('TkAgg')
+        fig, ax = plt.subplots(figsize=(18, 16))
+
+        image = ax.imshow(confusion)
+
+        labels = [labelFile.getLabelByIndex(i) for i in range(confusion.shape[0])]
+
+        ax.set_title("Heatmap der Modell-Aussagen auf den Testdaten")
+        ax.set_xlabel("Vorhergesagte Klasse")
+        ax.set_ylabel("Echte Klasse")
+
+        ax.set_xticks(range(len(labels)))
+        ax.set_yticks(range(len(labels)))
+
+        ax.set_xticklabels(labels, rotation=90, fontsize=6)
+        ax.set_yticklabels(labels, fontsize=6)
+
+        fig.colorbar(image, ax=ax, label="Anzahl Bilder")
+
+        plt.tight_layout()
+
+        if savePath is not None:
+            self.createFolderForFile(savePath)
+            plt.savefig(savePath, dpi=300)
+
+        plt.show()
 
 
 if __name__ == "__main__":

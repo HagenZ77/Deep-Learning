@@ -1,42 +1,13 @@
 import gc
 import os
 import copy
-import numpy as np
-from PIL import Image
 from torch.utils.data import DataLoader
 import torch
 import torch.nn as nn
 from matplotlib import pyplot as plt
-from train import Train, ImageDataset
+from tools.train import Train
+from tools.ImageDataset224 import ImageDataset224
 from transferModelFactory import TransferModelFactory
-
-
-# Das Laden der Bilder muss einmal angepasst werden, weil wir jetzt 224x224 brauchen und nicht mehr 128x128
-class TransferImageDataset(ImageDataset):
-    def loadImage(self, path):
-        img = Image.open(path).convert("RGB")
-        img = img.resize((224, 224))
-        img = np.array(img).astype("float32") / 255.0
-
-        mean = np.array([0.485, 0.456, 0.406], dtype="float32")
-        std = np.array([0.229, 0.224, 0.225], dtype="float32")
-
-        img = (img - mean) / std
-        img = np.transpose(img, (2, 0, 1))
-
-        return img
-
-    def __getitem__(self, index):
-        path = self.files[index]
-
-        x = self.loadImage(path)
-        y = self.labelFile.getInfoFromImagePath(path).label
-
-        x = torch.tensor(x, dtype=torch.float32)
-        y = torch.tensor(y, dtype=torch.long)
-
-        return x, y
-
 
 
 # Dieser Runner vergleicht mehrere vortrainierte Modelle.
@@ -225,8 +196,8 @@ class TransferLearningRunner:
 
     def createTransferDataLoaders(self, trainFiles, valFiles, labelFile):
         # Erstellt die Dataset-Objekte fuer Training und Validierung.
-        trainDataset = TransferImageDataset(trainFiles, labelFile)
-        valDataset = TransferImageDataset(valFiles, labelFile)
+        trainDataset = ImageDataset224(trainFiles, labelFile)
+        valDataset = ImageDataset224(valFiles, labelFile)
 
         # DataLoader fuer das Training.
         # shuffle=True, damit die Trainingsbilder pro Epoche gemischt werden.

@@ -1,0 +1,73 @@
+{
+    "created_at": "2026-06-26T16:11:49.789705",
+    "dataset": {
+        "train_count": 58124,
+        "val_count": 11474,
+        "image_size": [
+            128,
+            128,
+            3
+        ],
+        "classes": 62
+    },
+    "training": {
+        "epochs": 40,
+        "batch_size": 32,
+        "optimizer": "adam",
+        "learning_rate": 1e-05,
+        "loss": "cross_entropy_loss",
+        "metrics": [
+            "accuracy"
+        ],
+        "trained_part": "classifier_and_last_vgg13_feature_layers",
+        "unfrozen_conv_layer_count": 1,
+        "unfrozen_feature_indices": [
+            22
+        ]
+    },
+    "model_architecture": "VGG(\n  (features): Sequential(\n    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU(inplace=True)\n    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (3): ReLU(inplace=True)\n    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (6): ReLU(inplace=True)\n    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (8): ReLU(inplace=True)\n    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (11): ReLU(inplace=True)\n    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (13): ReLU(inplace=True)\n    (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (15): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (16): ReLU(inplace=True)\n    (17): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (18): ReLU(inplace=True)\n    (19): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (20): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (21): ReLU(inplace=True)\n    (22): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (23): ReLU(inplace=True)\n    (24): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n  )\n  (avgpool): AdaptiveAvgPool2d(output_size=(7, 7))\n  (classifier): Sequential(\n    (0): Linear(in_features=25088, out_features=4096, bias=True)\n    (1): ReLU(inplace=True)\n    (2): Dropout(p=0.5, inplace=False)\n    (3): Linear(in_features=4096, out_features=4096, bias=True)\n    (4): ReLU(inplace=True)\n    (5): Dropout(p=0.5, inplace=False)\n    (6): Linear(in_features=4096, out_features=62, bias=True)\n  )\n)",
+    "history": {
+        "loss": [
+            1.2773276661197674,
+            0.16077070642016839,
+            0.05809429314191435,
+            0.026464850786346826,
+            0.015004297410236797,
+            0.008986086622634254
+        ],
+        "accuracy": [
+            0.6525703668020095,
+            0.9557497763402382,
+            0.9851352281329572,
+            0.9933934347257587,
+            0.9963870346156493,
+            0.9979010391576629
+        ],
+        "val_loss": [
+            0.45447171907366996,
+            0.2781320702515158,
+            0.215521769268114,
+            0.1912105624678935,
+            0.21109686215896092,
+            0.21149450417057838
+        ],
+        "val_accuracy": [
+            0.8600313752832491,
+            0.91188774620882,
+            0.9299285340770438,
+            0.9395154261809308,
+            0.9379466620184765,
+            0.93942827261635
+        ]
+    },
+    "name": "VGG13_finetune_last_1_conv_layers_lr_1e-05",
+    "phase": "vgg13_fine_tuning",
+    "evaluation": {
+        "best_epoch": 4,
+        "best_val_loss": 0.1912105624678935,
+        "best_val_accuracy": 0.9395154261809308,
+        "max_val_accuracy": 0.9395154261809308,
+        "final_val_loss": 0.21149450417057838,
+        "final_val_accuracy": 0.93942827261635
+    }
+}

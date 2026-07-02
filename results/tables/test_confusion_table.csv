@@ -1,0 +1,41 @@
+modelName;accuracy;testCount;wrongPredictions;trueLabel;predictedLabel;count;percentOfErrors
+finalModel_architectureDesign;0.9629723560740553;11829;438;Ahead Only;Go Straight or Right;58;0.1324200913242009
+finalModel_architectureDesign;0.9629723560740553;11829;438;Speed limit (70km/h);Speed limit (120km/h);36;0.0821917808219178
+finalModel_architectureDesign;0.9629723560740553;11829;438;No passing for HTVs;Vechiles over 3.5 Tons Prohibited;29;0.06621004566210045
+finalModel_architectureDesign;0.9629723560740553;11829;438;No passing for HTVs;End of no Passing Vehicles > 3.5 Tons;29;0.06621004566210045
+finalModel_architectureDesign;0.9629723560740553;11829;438;Keep Left;No Entry;29;0.06621004566210045
+finalModel_architectureDesign;0.9629723560740553;11829;438;U-Turn Ahead;Roundabout Mandatory;27;0.06164383561643835
+finalModel_architectureDesign;0.9629723560740553;11829;438;Traffic Signals;Caution ! LandSliding;23;0.05251141552511415
+finalModel_architectureDesign;0.9629723560740553;11829;438;Slippery Road;Caution ! Crosswinds;18;0.0410958904109589
+finalModel_architectureDesign;0.9629723560740553;11829;438;Pedestrians;Children Crossing;17;0.03881278538812785
+finalModel_architectureDesign;0.9629723560740553;11829;438;End of No Passing;No Speed Limits;16;0.0365296803652968
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;No passing for HTVs;Vechiles over 3.5 Tons Prohibited;35;0.12867647058823528
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;No passing for HTVs;End of no Passing Vehicles > 3.5 Tons;29;0.10661764705882353
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;Weight Limit;Speed limit (20km/h);15;0.05514705882352941
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;Children Crossing;Pedestrians;14;0.051470588235294115
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;Beware of Ice/Snow;Bicycles Crossing;14;0.051470588235294115
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;Turn Right Ahead;Dangerous Curve Right;14;0.051470588235294115
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;Beware of Ice/Snow;Children Crossing;11;0.04044117647058824
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;Speed limit (70km/h);Speed limit (50km/h);10;0.03676470588235294
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;Pedestrians;Children Crossing;10;0.03676470588235294
+VGG13_finetune_last_5_conv_layers_lr_1e-05;0.9770056640459887;11829;272;End of No Passing;No Speed Limits;10;0.03676470588235294
+googlenet_distillation_student;0.9800490320399019;11829;236;No passing for HTVs;Vechiles over 3.5 Tons Prohibited;31;0.13135593220338984
+googlenet_distillation_student;0.9800490320399019;11829;236;No passing for HTVs;End of no Passing Vehicles > 3.5 Tons;29;0.1228813559322034
+googlenet_distillation_student;0.9800490320399019;11829;236;Keep Left;No Speed Limits;29;0.1228813559322034
+googlenet_distillation_student;0.9800490320399019;11829;236;Traffic Signals;Caution ! LandSliding;23;0.09745762711864407
+googlenet_distillation_student;0.9800490320399019;11829;236;End of no Passing Vehicles > 3.5 Tons;End of No Passing;17;0.07203389830508475
+googlenet_distillation_student;0.9800490320399019;11829;236;Children Crossing;Pedestrians;15;0.0635593220338983
+googlenet_distillation_student;0.9800490320399019;11829;236;End of No Passing;No Speed Limits;14;0.059322033898305086
+googlenet_distillation_student;0.9800490320399019;11829;236;Weight Limit;Speed limit (20km/h);12;0.05084745762711865
+googlenet_distillation_student;0.9800490320399019;11829;236;Turn Right Ahead;Dangerous Curve Right;9;0.038135593220338986
+googlenet_distillation_student;0.9800490320399019;11829;236;Beware of Ice/Snow;Railway Crossing with Gates;6;0.025423728813559324
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;No passing for HTVs;Vechiles over 3.5 Tons Prohibited;53;0.14058355437665782
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;Ahead Only;Two Way Traffic;49;0.129973474801061
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;No passing for HTVs;End of no Passing Vehicles > 3.5 Tons;29;0.07692307692307693
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;Keep Left;No Speed Limits;28;0.07427055702917772
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;Traffic Signals;Caution ! LandSliding;23;0.0610079575596817
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;Animals Crossing;Slippery Road;20;0.05305039787798409
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;Two Way Traffic;Road Narrows on the Left;19;0.050397877984084884
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;Pedestrians;Children Crossing;17;0.04509283819628647
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;No Speed Limits;End of No Passing;14;0.03713527851458886
+googlenet_without_teacher_heatmap;0.9681291740637417;11829;377;No Speed Limits;No Entry;12;0.03183023872679045

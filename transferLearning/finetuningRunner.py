@@ -2,7 +2,7 @@ import copy
 import os
 import torch.nn as nn
 from torchvision.models import vgg13, VGG13_Weights
-from train import Train
+from tools.train import Train
 from transferLearningRunner import TransferLearningRunner
 
 # Fuehrt das Fine-Tuning fuer VGG13 durch.
