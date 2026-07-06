@@ -6,9 +6,9 @@ def main():
     # Pfade zu Testdaten, Labeldatei und final gespeichertem Modell. Muessen angepasst werden
     testDir = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/CleanDataset/test"
     labelPath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/CleanDataset/labels.txt"
-    modelPath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/knowledgeDistillation/results/models/googlenet_distillation_student.pth"
-    heatmapSavePath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/knowledgeDistillation/results/diagrams/googlenet_distillation_student_heatmap.png"
-    jsonSavePath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/knowledgeDistillation/results/json/googlenet_distillation_student_test.json"
+    modelPath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/architectureDesign/results/models/finalModel.pth"
+    heatmapSavePath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/architectureDesign/results/diagrams/finalModel_heatmap.png"
+    jsonSavePath = "/mnt/c/Users/hagen/Desktop/Semester6/DeepLearning/architectureDesign/results/json/finalModel_test.json"
 
     evaluator = EvaluateTestModel()
 
@@ -19,7 +19,7 @@ def main():
         ImageDataset128,
         heatmapSavePath,
         jsonSavePath,
-        "googlenet_distillation_student"
+        "finalModel"
     )
 
 

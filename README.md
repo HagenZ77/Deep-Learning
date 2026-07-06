@@ -30,7 +30,7 @@ Deshalb müssen die Pfade im Code angepasst werden.
 
 ### Eigenes CNN-Modell
 
-- `architectureDesign/train.py`  
+- `architectureDesign/trainFinalModel.py`  
   Trainiert und speichert das ausgewählte eigene CNN-Modell.
 
 - `architectureDesign/test.py`  
@@ -51,7 +51,7 @@ Deshalb müssen die Pfade im Code angepasst werden.
   Führt den Transfer-Learning-Modellvergleich aus.  
   Dabei werden mehrere vortrainierte Modelle geladen, der Feature Extractor eingefroren und nur der jeweilige Classifier bzw. die FC-Schicht trainiert.
 
-- `transferLearning/fineTuningRunner.py`  
+- `transferLearning/finetuningRunner.py`  
   Führt das Fine-Tuning für VGG13 durch.  
   Dabei bleibt der Classifier trainierbar und zusätzlich werden schrittweise die letzten 1 bis 5 Convolutional Layer freigegeben.  
   Jede Variante wird mit den Lernraten 0.0001 und 0.00001 getestet.
